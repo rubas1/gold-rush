@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Rush</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "game-board">
+        <h1>Choose your board dimensions to start... </h1>
+        <input type="text" id="rows" placeholder="Enter Rows Number">
+        <input type="text" id="cols" placeholder="Enter Columns Number">
+        <button id="start" onclick="startGame()">Start</button>
+    </div>
+
+    <!--Templates-->
+
+    <script id="board-template" type="text/x-handlebars-template"> 
+        {{#each board}}
+            <p>{{this}}</p>
+        {{/each}}
+    </script>
+
+    <script id="score-template" type="text/x-handlebars-template"> 
+       <div class="player1-score">
+           <p>Player no.1 score is: {{score1}}</p>
+           <p>Player no.2 score is: {{score2}}</p>
+       </div>
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="Matrix.js"></script>
+    <script src="GoldRush.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
